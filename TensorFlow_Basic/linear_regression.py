@@ -26,7 +26,9 @@ def train_step(x, y):
     with tf.GradientTape() as tape:
         y_pred = linear_model(x)
         loss = loss_function(y_pred, y)
+    # gradient 계산
     gradients = tape.gradient(loss, [W, b])
+    # 가중치 및 bias 업데이트
     optimizer.apply_gradients(zip(gradients, [W, b]))
 
 # 트레이닝을위 한 train data set 정의
