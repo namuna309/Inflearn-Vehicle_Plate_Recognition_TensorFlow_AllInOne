@@ -103,3 +103,4 @@ f.savefig('reconstructed_mnist_image.png')  # reconstruction 결과를 png로 �
 f.show()
 plt.draw()
 plt.waitforbuttonpress()
+
